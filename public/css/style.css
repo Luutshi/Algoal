@@ -1,0 +1,62 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #060A38;
+  --page-padding: 0 200px;
+}
+body .header {
+  background-color: #313A6C;
+  color: white;
+  padding: var(--page-padding);
+}
+body .header .header__content {
+  display: flex;
+  justify-content: space-between;
+}
+body .header .header__content .logo svg {
+  padding-top: 15px;
+  width: 150px;
+}
+body .header .header__content .menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+body .header .header__content .menu nav {
+  display: flex;
+}
+body .header .header__content .menu nav a {
+  padding: 15px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+body .header .header__content .menu a {
+  color: #FFF;
+  text-decoration: none;
+}
+body .header .header__content .menu > a {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid #FFF;
+  background-color: #313A6C;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  height: 18px;
+}
+body .header .header__content .menu > a svg {
+  height: 20px;
+  width: fit-content;
+}
+body .header .header__content .menu > a:hover {
+  background-color: #274C77;
+}
+body .header .header__content .menu > a .user-icon {
+  height: 16px;
+  filter: invert(100%);
+}
+
+/*# sourceMappingURL=style.css.map */

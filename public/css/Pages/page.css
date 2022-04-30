@@ -1,0 +1,64 @@
+main {
+  color: #FFF;
+}
+main div.leagues {
+  margin: 25px 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+main div.leagues > div {
+  background-color: #FFF;
+  border-radius: 10px;
+}
+main div.leagues > div .league-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  color: black;
+}
+main div.leagues > div .league-header .flag {
+  width: 16px;
+}
+main div.leagues > div .league-header p {
+  margin: 0;
+  font-size: 16px;
+}
+main div.leagues > div .league-matches {
+  display: flex;
+  flex-direction: column;
+}
+main div.leagues > div .league-matches > div {
+  margin: 2px;
+  border-radius: 10px;
+  background-color: #313A6C;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+main div.leagues > div .league-matches > div:hover {
+  background-color: #274C77;
+}
+main div.leagues > div .league-matches > div > div {
+  width: calc(50% - 80px);
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-direction: row;
+}
+main div.leagues > div .league-matches > div > div img {
+  height: 24px;
+}
+main div.leagues > div .league-matches > div > p {
+  width: 100px;
+  text-align: center;
+  margin: 0;
+}
+main div.leagues > div .league-matches > div .home {
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=page.css.map */

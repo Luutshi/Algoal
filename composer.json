@@ -1,0 +1,24 @@
+{
+    "name": "luis/api",
+    "require": {
+        "twig/twig": "^3.3",
+        "bramus/router": "^1.6",
+      "ext-curl": "*",
+      "ext-pdo": "*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mvc\\": "src/",
+            "Config\\": "config/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luutshi",
+            "email": "luutshi@gmail.com"
+        }
+    ]
+}

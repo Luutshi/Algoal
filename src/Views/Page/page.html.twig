@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/Pages/page.css">
+{% endblock %}
+
+{% block js %}
+    <script src="./js/index.js"></script>
+{% endblock %}
+
+{% block content %}
+    <input type="date" id="matchesDate">
+    <div class="leagues">
+        {% for league in leagues %}
+            <div>
+                <div class="league-header">
+                    <img class="flag" src="{{ league.flag }}" />
+                    <p>{{ league.country }} - {{ league.name }}</p>
+                </div>
+
+                <div class="league-matches">
+                    {% for match in matches %}
+                        {% if match.league_id == league.league_id %}
+                            <a href="/predict/{{ match.id }}">
+                                <div class="home">
+                                    <p>{{ match.home.name }}</p>
+                                    <img src="{{ match.home.logo }}" />
+                                </div>
+                                <p>| {{ match.date.0 }} |</p>
+                                <div class="away">
+                                    <img src="{{ match.away.logo }}" />
+                                    <p>{{ match.away.name }}</p>
+                                </div>
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+main {
+  color: #FFF;
+
+  div.leagues {
+    margin: 25px 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+
+    > div {
+      background-color: #FFF;
+      border-radius: 10px;
+
+
+      .league-header {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px;
+        color: black;
+
+        .flag {
+          width: 16px;
+        }
+
+        p {
+          margin: 0;
+          font-size: 16px;
+        }
+      }
+
+      .league-matches {
+        display: flex;
+        flex-direction: column;
+
+        > div {
+          margin: 2px;
+          border-radius: 10px;
+          background-color: #313A6C;
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 30px;
+
+          &:hover {
+            background-color: #274C77;
+          }
+
+          > div {
+            width: calc(50% - 80px);
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-direction: row;
+
+            img {
+              height: 24px;
+            }
+          }
+
+          > p {
+            width: 100px;
+            text-align: center;
+            margin: 0;
+          }
+
+          .home {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
