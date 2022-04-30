@@ -2,27 +2,22 @@
 
 namespace Mvc\Controllers;
 
-use Config\Controller;
 use Mvc\Models\ApiModel;
-use Mvc\Models\DataModel;
 
-class ApiController extends ApiModel
+class ApiController
 {
     private ApiModel $apiModel;
-    private DataModel $dataModel;
 
     public function __construct()
     {
         $this->apiModel = new ApiModel();
-        $this->dataModel = new DataModel();
-        parent::__construct();
     }
 
     public function matches($date)
     {
         date_default_timezone_set('Europe/Paris');
 
-        $matches = $this->dataModel->matchesFromDate($date);
+        $matches = $this->apiModel->matchesFromDate($date);
 
         $data = [];
 
@@ -40,6 +35,7 @@ class ApiController extends ApiModel
     public function predict(int $fixtureID)
     {
         $match = $this->apiModel->fixtureData($fixtureID);
+        $league = $this->apiModel->findLeagueByID($match['league_id']);
         $homeTable = $this->apiModel->leagueTables($match['league_id'], 'home');
         $stats['totalPlayed'] = $stats['homeGoalsFor'] = $stats['homeGoalsAgainst'] = 0;
 
@@ -148,11 +144,17 @@ class ApiController extends ApiModel
             $bettingTips['btts'] = 'Pas de conseil';
         }
 
+        unset(
+            $league['id'], $league['season'],
+            $homeTeam['id'], $homeTeam['rank'], $homeTeam['played'], $homeTeam['goalsFor'], $homeTeam['goalsAgainst'],
+            $awayTeam['id'], $awayTeam['rank'], $awayTeam['played'], $awayTeam['goalsFor'], $awayTeam['goalsAgainst']);
+
+
         $data['result'] = $result;
-        $data['homeTeam'] = $homeTeam;
-        $data['awayTeam'] = $awayTeam;
+        $data['teams']['home'] = $homeTeam;
+        $data['teams']['away'] = $awayTeam;
+        $data['league'] = $league;
         $data['bettingTips'] = $bettingTips;
-        $data['stats'] = $stats;
 
         echo(json_encode($data, true));
     }
