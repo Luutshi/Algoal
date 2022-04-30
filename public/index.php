@@ -7,7 +7,7 @@ session_start();
 $router = new Bramus\Router\Router();
 
 // Dev
-$router->get('/', 'Mvc\Controllers\PageController@each');
+$router->get('/', 'Mvc\Controllers\PageController@base');
 $router->get('/matches/(\d+-\d+-\d+)', 'Mvc\Controllers\ApiController@matches');
 $router->get('/predict/(\d+)', 'Mvc\Controllers\ApiController@predict');
 
