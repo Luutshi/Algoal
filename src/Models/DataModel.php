@@ -232,7 +232,7 @@ class DataModel extends Model
                                                 LEFT JOIN team home_team ON match.home_id = home_team.id
                                                 LEFT JOIN team away_team ON match.away_id = away_team.id
                                                 WHERE Date(match.date) = :date
-                                                ORDER BY league.country, league.name, match.date');
+                                                ORDER BY league.country, league.name, match.date, home_team_name');
         $statement->execute([
             'date' => $date
         ]);
