@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         // Hour
                         let hour = document.createElement('p');
                         let hourRegex = new RegExp(/\d{2}:\d{2}:\d{2}/);
-                        let hourContent = document.createTextNode(`| ${match['date'].match(hourRegex)} |`);
+                        let hourContent = document.createTextNode(`${match['date'].match(hourRegex)}`);
                         hour.appendChild(hourContent);
                         newMatch.appendChild(hour);
 
