@@ -1,73 +1,94 @@
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #FFF;
+  font-size: 13px;
 
-  div.leagues {
-    margin: 25px 300px;
+  div.content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #313A6C;
     gap: 25px;
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 20px;
 
+    div.leagues {
+      width: 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
 
-    > div {
-      background-color: #FFF;
-      border-radius: 10px;
-
-
-      .league-header {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 10px;
-        color: black;
-
-        .flag {
-          width: 16px;
-        }
-
-        p {
-          margin: 0;
-          font-size: 16px;
-        }
-      }
-
-      .league-matches {
-        display: flex;
-        flex-direction: column;
-
-        > div {
-          margin: 2px;
-          border-radius: 10px;
-          background-color: #313A6C;
-          color: white;
+      > div {
+        .league-header {
           display: flex;
           align-items: center;
-          gap: 30px;
+          gap: 6px;
+          padding: 6px;
+          color: black;
+          background-color: #FFF;
+          border-radius: 10px;
 
-          &:hover {
-            background-color: #274C77;
+          .flag {
+            width: 16px;
           }
+
+          p {
+            margin: 0;
+            font-size: 13px;
+          }
+        }
+
+        .league-matches {
+          display: flex;
+          flex-direction: column;
 
           > div {
-            width: calc(50% - 80px);
-            padding: 0 30px;
+            border-bottom: 1px solid gray;
+            background-color: #313A6C;
+            color: white;
             display: flex;
             align-items: center;
-            gap: 6px;
-            flex-direction: row;
+            gap: 30px;
+            font-size: 13px;
 
-            img {
-              height: 24px;
+            &:hover {
+              background-color: #274C77;
             }
-          }
 
-          > p {
-            width: 100px;
-            text-align: center;
-            margin: 0;
-          }
+            > div {
+              width: calc(50% - 80px);
+              padding: 6px 30px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 6px;
 
-          .home {
-            justify-content: flex-end;
+              img {
+                height: 24px;
+              }
+
+              p {
+                margin: 0;
+              }
+            }
+
+            > p {
+              width: 100px;
+              text-align: center;
+              margin: 0;
+            }
+
+            .home {
+              justify-content: flex-end;
+            }
+
+            .away {
+              justify-content: flex-start;
+            }
           }
         }
       }

@@ -13,8 +13,8 @@ body .header .header__content {
   display: flex;
   justify-content: space-between;
 }
-body .header .header__content .logo svg {
-  padding-top: 15px;
+body .header .header__content .logo img {
+  padding-top: 10px;
   width: 150px;
 }
 body .header .header__content .menu {
