@@ -8,11 +8,12 @@ body {
   .header {
     background-color: #313A6C;
     color: white;
-    padding: var(--page-padding);
 
     .header__content {
+      margin: auto;
       display: flex;
       justify-content: space-between;
+      width: 1000px;
 
       .logo {
         img {
