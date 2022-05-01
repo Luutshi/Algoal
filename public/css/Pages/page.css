@@ -10,7 +10,7 @@ main div.content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #313A6C;
+  background-color: #FFF;
   gap: 25px;
   margin-top: 25px;
   padding: 10px;
@@ -26,9 +26,9 @@ main div.content div.leagues > div .league-header {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px;
+  padding: 8px;
   color: black;
-  background-color: #FFF;
+  background-color: #fff2ce;
   border-radius: 10px;
 }
 main div.content div.leagues > div .league-header .flag {
@@ -43,16 +43,16 @@ main div.content div.leagues > div .league-matches {
   flex-direction: column;
 }
 main div.content div.leagues > div .league-matches > div {
-  border-bottom: 1px solid gray;
-  background-color: #313A6C;
-  color: white;
+  border-bottom: 1px solid #EEE;
+  background-color: #FFF;
+  color: #001e28;
   display: flex;
   align-items: center;
   gap: 30px;
   font-size: 13px;
 }
 main div.content div.leagues > div .league-matches > div:hover {
-  background-color: #274C77;
+  background-color: #CDCDCD;
 }
 main div.content div.leagues > div .league-matches > div > div {
   width: calc(50% - 80px);

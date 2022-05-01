@@ -1,11 +1,11 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  background-color: #060A38;
+  background-color: #EEE;
   --page-padding: 0 200px;
 }
 body .header {
-  background-color: #313A6C;
+  background-color: #121420;
   color: white;
 }
 body .header .header__content {
@@ -42,8 +42,7 @@ body .header .header__content .menu > a {
   align-items: center;
   gap: 8px;
   border-radius: 6px;
-  border: 1px solid #FFF;
-  background-color: #313A6C;
+  background-color: #1B2432;
   padding: 10px 15px;
   text-transform: uppercase;
   height: 18px;
@@ -53,7 +52,7 @@ body .header .header__content .menu > a svg {
   width: fit-content;
 }
 body .header .header__content .menu > a:hover {
-  background-color: #274C77;
+  background-color: #131313;
 }
 body .header .header__content .menu > a .user-icon {
   height: 16px;

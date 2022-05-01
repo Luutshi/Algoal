@@ -10,7 +10,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #313A6C;
+    background-color: #FFF;
     gap: 25px;
     margin-top: 25px;
     padding: 10px;
@@ -27,9 +27,9 @@ main {
           display: flex;
           align-items: center;
           gap: 6px;
-          padding: 6px;
+          padding: 8px;
           color: black;
-          background-color: #FFF;
+          background-color: #fff2ce;
           border-radius: 10px;
 
           .flag {
@@ -47,16 +47,16 @@ main {
           flex-direction: column;
 
           > div {
-            border-bottom: 1px solid gray;
-            background-color: #313A6C;
-            color: white;
+            border-bottom: 1px solid #EEE;
+            background-color: #FFF;
+            color: #001e28;
             display: flex;
             align-items: center;
             gap: 30px;
             font-size: 13px;
 
             &:hover {
-              background-color: #274C77;
+              background-color: #CDCDCD;
             }
 
             > div {
